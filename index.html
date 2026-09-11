@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Controle de Estacionamento</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+
+        .container {
+            width: 600px;
+        }
+
+        .grupo {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 8px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            cursor: pointer;
+        }
+
+        #informacoes,
+        #veiculos,
+        #mensagem {
+            margin-top: 20px;
+            padding: 15px;
+            border: 1px solid #000;
+        }
+
+        #mensagem {
+            min-height: 20px;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Controle de Estacionamento</h1>
+
+        <div class="grupo">
+
+            <h3>Veículo</h3>
+
+            <label>Placa:</label>
+            <input type="text" id="placa" />
+
+            <br />
+
+            <label>Modelo:</label>
+            <input type="text" id="modelo" />
+
+        </div>
+
+
+        <div class="grupo">
+
+            <button onclick="entrarVeiculo()">
+                ENTRAR
+            </button>
+
+            <button onclick="sairVeiculo()">
+                SAIR
+            </button>
+
+            <button onclick="limparCampos()">
+                LIMPAR
+            </button>
+
+        </div>
+
+
+        <div id="informacoes">
+
+            <h3>Estacionamento</h3>
+
+            <p>
+                Total de Vagas:
+                <strong id="totalVagas">10</strong>
+            </p>
+
+            <p>
+                Vagas Ocupadas:
+                <strong id="vagasOcupadas">0</strong>
+            </p>
+
+            <p>
+                Vagas Disponíveis:
+                <strong id="vagasDisponiveis">10</strong>
+            </p>
+
+        </div>
+
+
+        <div id="mensagem">
+
+            Nenhuma operação realizada.
+
+        </div>
+
+
+        <div id="veiculos">
+
+            <h3>Veículos Estacionados</h3>
+
+            <ul id="listaVeiculos">
+                <li>Nenhum veículo estacionado.</li>
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <script src="/script.js"></script>
+
+</body>
+
+</html>
